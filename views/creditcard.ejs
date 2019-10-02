@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Credit Card Authorization</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Credit Card Authorization Response</h2>
+    <%
+        if ("errors" in response) {
+    %>
+        Credit card transaction <strong>declined</strong>: <%= response.errors %>
+    <%
+        } else {
+    %>
+        Credit card transaction authorization number: <%= response.authorization %>
+    <%
+        }
+    %>
+    <h3>Transaction Detail</h3>
+    <ul>
+    <% for (name in response) { %>
+        <li><%= name %>: <%= response[name] %> </li>
+    <% } %>    
+    </ul>
+  </body>
+</html>

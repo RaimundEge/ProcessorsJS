@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Purchase Order Processing</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Purchase Order Processing Response</h2>
+    <%
+        if ("errors" in response) {
+    %>
+        Purchase order transaction <strong>declined</strong>: <%= response.errors %>
+    <%
+        } else {
+    %>
+        Purchase order approved. Job will commence on: <%= response.processDay %>
+    <%
+        }
+    %>
+    <h3>Transaction Detail</h3>
+    <ul>
+    <% for (name in response) { %>
+        <li><%= name %>: <%= response[name] %> </li>
+    <% } %>    
+    </ul>
+  </body>
+</html>

@@ -1,0 +1,19 @@
+{
+  "name": "restall",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.0",
+    "ejs": "~2.5.5",
+    "express": "^4.17.1",
+    "mariasql": "^0.2.6",
+    "mongodb": "^3.2.6",
+    "morgan": "^1.9.1",
+    "serve-favicon": "^2.5.0"
+  }
+}

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Credit Card Transactions</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Current Credit Card Transactions</h2>
+    <table border=1 cellpadding=6>
+    <tr><th>Date</th><th>Vendor</th><th>Transaction</th><th>Amount</th><th>CC</th><th>Authorization</th></tr>
+    <% for (trans of data) {
+            d = new Date(trans.timeStamp);
+            date = d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes();
+    %>
+    <tr>
+        <td><%= date %></td>
+        <td><%= trans.vendor %></td><td><%= trans.trans %></td><td><%= trans.amount %></td>
+        <td><%= trans.cc %></td><td><%= trans.authorization %></td>
+    <tr>
+    <% } %>
+    </table>
+  </body>
+</html>

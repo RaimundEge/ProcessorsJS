@@ -1,0 +1,44 @@
+
+> restall@0.0.0 start /home/www/blitz/CSCI467 DemoDB Rest Service
+> node ./bin/www
+
+internal/modules/cjs/loader.js:775
+    throw err;
+    ^
+
+Error: Cannot find module '../build/Debug/sqlclient'
+Require stack:
+- /home/www/blitz/CSCI467 DemoDB Rest Service/node_modules/mariasql/lib/Client.js
+- /home/www/blitz/CSCI467 DemoDB Rest Service/maria.js
+- /home/www/blitz/CSCI467 DemoDB Rest Service/routes/purchase.js
+- /home/www/blitz/CSCI467 DemoDB Rest Service/app.js
+- /home/www/blitz/CSCI467 DemoDB Rest Service/bin/www
+    at Function.Module._resolveFilename (internal/modules/cjs/loader.js:772:15)
+    at Function.Module._load (internal/modules/cjs/loader.js:677:27)
+    at Module.require (internal/modules/cjs/loader.js:830:19)
+    at require (internal/modules/cjs/helpers.js:68:18)
+    at Object.<anonymous> (/home/www/blitz/CSCI467 DemoDB Rest Service/node_modules/mariasql/lib/Client.js:13:11)
+    at Module._compile (internal/modules/cjs/loader.js:936:30)
+    at Object.Module._extensions..js (internal/modules/cjs/loader.js:947:10)
+    at Module.load (internal/modules/cjs/loader.js:790:32)
+    at Function.Module._load (internal/modules/cjs/loader.js:703:12)
+    at Module.require (internal/modules/cjs/loader.js:830:19) {
+  code: 'MODULE_NOT_FOUND',
+  requireStack: [
+    '/home/www/blitz/CSCI467 DemoDB Rest Service/node_modules/mariasql/lib/Client.js',
+    '/home/www/blitz/CSCI467 DemoDB Rest Service/maria.js',
+    '/home/www/blitz/CSCI467 DemoDB Rest Service/routes/purchase.js',
+    '/home/www/blitz/CSCI467 DemoDB Rest Service/app.js',
+    '/home/www/blitz/CSCI467 DemoDB Rest Service/bin/www'
+  ]
+}
+npm ERR! code ELIFECYCLE
+npm ERR! errno 1
+npm ERR! restall@0.0.0 start: `node ./bin/www`
+npm ERR! Exit status 1
+npm ERR! 
+npm ERR! Failed at the restall@0.0.0 start script.
+npm ERR! This is probably not a problem with npm. There is likely additional logging output above.
+
+npm ERR! A complete log of this run can be found in:
+npm ERR!     /home/ege/.npm/_logs/2019-10-02T20_14_04_840Z-debug.log

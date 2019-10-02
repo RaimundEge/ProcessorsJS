@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Current Purchase Order Transactions</title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+  </head>
+  <body>
+    <h2>Current Purchase Order Transactions</h2>
+    <table border=1 cellpadding=6>
+    <tr><th>Date</th><th>Order</th><th>Associate</th><th>Amount</th><th>Commission</th><th>ProcessDay</th></tr>
+    <% for (trans of data) { 
+            d = new Date(trans.timeStamp);
+            date = d.getFullYear() + '/' + (d.getMonth()+1) + '/' + d.getDate() + ' ' + d.getHours() + ':' + d.getMinutes();
+    %>
+    <tr>
+        <td><%= date %></td>
+        <td><%= trans.order %></td><td><%= trans.associate %></td><td><%= trans.amount %></td>
+        <td><%= trans.commission %></td><td><%= trans.processDay %></td>
+    <tr>
+    <% } %>
+    </table>
+  </body>
+</html>
